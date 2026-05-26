@@ -1,0 +1,39 @@
+@import "tailwindcss";
+:root {
+    --bg: #222831;
+    --bg-light: #393E46;
+    --accent: #948979;
+    --light: #DFD0B8;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--light);
+}
+
+.box-shadow {
+    box-shadow: 4px 4px 20px #00000034;
+}
+
+.mood-btn{
+    transition: animation 0.3s ease-in-out;
+}
+
+.mood-btn:hover {
+    animation: scaleAnimate 0.3s ease-out;
+    border:2px solid var(--light);
+    color: var(--light);
+}
+
+@keyframes scaleAnimate {
+    0%{ 
+        scale: 1.03;
+    }
+    100% {
+        scale: 1;
+    }
+}
