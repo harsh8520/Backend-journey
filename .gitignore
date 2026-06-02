@@ -1,3 +1,5 @@
 resume
 *.html
 notes
+.env
+node_modules
