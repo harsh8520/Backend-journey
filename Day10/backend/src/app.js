@@ -6,12 +6,13 @@ import commentRoutes from "./routes/commentRoutes.js";
 import cors from 'cors'
 
 const app = e();
+
+app.use(e.json());
+app.use(cookieParser())
 app.use(cors({
     origin: process.env.FRONTEND_URL,
     credentials: true,
 }))
-app.use(e.json());
-app.use(cookieParser())
 
 app.use((req, res, next) => {
     const timestamp = new Date().toLocaleString();
