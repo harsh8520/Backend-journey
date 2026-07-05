@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+    --bg: #B0BA99;
+    --text: #F7F1DE;
+    --text-opacity: #f7f1dead;
+    --primary: #9D6638;
+    --secondary: #4E220F;
+}
+
+@font-face {
+    font-family: 'Adlery pro';
+    src: url('./assets/fonts/adlery-pro.regular.ttf');
+}
+
+.Outfit {
+    font-family: 'Outfit';
+}
+
+.Helvetica-neue {
+    font-family: 'Helvetica-neue';
+}
+
+.Adlery-pro {
+    font-family: 'Adlery pro';
+}
+
+.Inter {
+    font-family: 'Inter';
+}
+
+html,
+body,
+#root{
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+}
+
+.status-btn {
+    background-color: var(--secondary);
+    color: var(--text);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.bg-slider {
+    background: #000;
+}
