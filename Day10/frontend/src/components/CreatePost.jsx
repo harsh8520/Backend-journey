@@ -43,7 +43,7 @@ const CreatePost = () => {
                     {...register('title')}
                 />
 
-                <textarea name="" id="" placeholder='Enter post content' className='resize-y focus:outline-2 focus:outline-(--primary) bg-(--text) rounded px-4 py-2 text-xl'
+                <textarea name="" id="" rows={20} placeholder='Enter post content' className='resize-y focus:outline-2 focus:outline-(--primary) bg-(--text) rounded px-4 py-2 text-xl'
                     {...register('content')}
                 />
 
