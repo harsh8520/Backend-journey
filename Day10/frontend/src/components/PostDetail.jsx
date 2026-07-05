@@ -107,7 +107,7 @@ const PostDetail = () => {
     return (
         <>
             <div className='h-fit w-full flex flex-col justify-between'>
-                <div className='md:px-40 px-12 pb-4 h-full w-full'>
+                <div className='md:px-15 px-5 lg:px-40 pb-4 h-full w-full'>
                     <div className="post-title-container border-b-2 border-b-(--secondary) pb-4 px-4">
                         <p className='text-(--primary) font-medium pb-4 text-xl'>{date}</p>
                         <h1 className='text-(--secondary) font-medium text-5xl pb-2'>{post.title}</h1>
@@ -118,7 +118,7 @@ const PostDetail = () => {
                         <img src={PostImage} className='w-full object-cover' />
                     </div>
 
-                    <div className="px-40 sm:px-12 py-6">
+                    <div className="px-7 md:px-10 lg:px-20 py-6">
                         {isPostEditing ?
                             <EditPostForm status={status} setStatus={setStatus} getPost={getPost} postId={postId} setIsPostEditing={setIsPostEditing} post={post} />
                             :
@@ -139,7 +139,7 @@ const PostDetail = () => {
                     </>}
                 </div>
 
-                <div className='comment-container bg-(--text) md:px-40 px-15 py-6 '>
+                <div className='comment-container bg-(--text) md:px-10 lg:px-40 px-12 py-6 '>
                     <h1 className='text-(--secondary) text-4xl font-medium'>Comments</h1>
 
                     <div className='relative flex items-center mt-8'>
