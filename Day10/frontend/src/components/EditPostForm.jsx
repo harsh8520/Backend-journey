@@ -2,8 +2,11 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import api from "../api/api"
 import { IoCloseCircleOutline } from "react-icons/io5"
+import { useNavigate } from "react-router"
 
 const EditPostForm = ({ status, setStatus, getPost, postId, setIsPostEditing, post }) => {
+    const navigate = useNavigate()
+
     const {
         register,
         reset,
@@ -25,6 +28,7 @@ const EditPostForm = ({ status, setStatus, getPost, postId, setIsPostEditing, po
             reset()
             setIsPostEditing(false)
             setStatus('draft')
+            navigate('/')
         } catch (e) {
             console.log("Error - " + e);
         }

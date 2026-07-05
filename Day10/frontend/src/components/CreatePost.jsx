@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import api from '../api/api'
+import { useNavigate } from 'react-router'
 
 const CreatePost = () => {
     const [status, setStatus] = useState('draft')
     const [error, setError] = useState(null)
+    const navigate = useNavigate()
 
     const {
         register,
@@ -28,6 +30,7 @@ const CreatePost = () => {
 
         reset()
         setStatus('draft')
+        navigate('/')
     }
 
     return (
