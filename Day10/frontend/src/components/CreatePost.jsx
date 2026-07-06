@@ -2,11 +2,14 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import api from '../api/api'
 import { useNavigate } from 'react-router'
+import { toast } from 'react-toastify'
 
 const CreatePost = () => {
     const [status, setStatus] = useState('draft')
     const [error, setError] = useState(null)
     const navigate = useNavigate()
+        const notify = () => toast.success('Post Created');
+    
 
     const {
         register,
@@ -71,6 +74,7 @@ const CreatePost = () => {
 
                     <button type='submit'
                         className='text-2xl px-6 py-2 border-2 border-(--secondary) bg-(--secondary) text-(--text) rounded'
+                        onClick={notify}
                     >Save</button>
                 </div>
             </form>
