@@ -6,8 +6,6 @@ import Navbar from '../components/Navbar'
 const ProtectedRoute = () => {
     const { user, loading } = useContext(authContext)
 
-    console.log("Protected route User - " + user);
-
     if (loading) return <h1>Loading....</h1>
     if (!user) return <Navigate to='/login' />
 

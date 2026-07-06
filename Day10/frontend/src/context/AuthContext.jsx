@@ -24,8 +24,6 @@ const AuthProvider = ({ children }) => {
 
     }, [])
 
-    console.log("Auth context User - " + user);
-
     return (
         <authContext.Provider value={{ user, setUser, loading }}>
             {children}
