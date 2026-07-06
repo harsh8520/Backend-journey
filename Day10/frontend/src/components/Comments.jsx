@@ -23,7 +23,7 @@ const Comments = ({ post, comments, isEditing, setIsEditing, updateComment, dele
                 return (
                     <div key={comment._id} className='comment border border-(--secondary) mt-8 p-5 text-(--secondary) h-fit'>
                         <div className='flex justify-between items-center text-2xl'>
-                            <h3 className='text-(--primary) font-semibold'>{comment.createdBy.email} - <span className='text-(--bg)' >{date}</span></h3>
+                            <h3 className='text-(--primary) font-semibold'>{comment.createdBy.username} - <span className='text-(--bg)' >{date}</span></h3>
                             <div className="icons flex items-center gap-4 text-3xl">
                                 {authComment && <>
                                     <FaRegEdit className='cursor-pointer' onClick={() => {

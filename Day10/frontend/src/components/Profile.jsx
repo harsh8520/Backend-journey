@@ -4,12 +4,15 @@ import { authContext } from '../context/AuthContext'
 import { useNavigate } from 'react-router'
 import api from '../api/api'
 import PostImage from '../assets/PostImage.png'
+import { toast } from 'react-toastify'
 
 
 const Profile = () => {
     const navigate = useNavigate()
     const { user } = useContext(authContext)
     const [posts, setPosts] = useState([])
+    const notify = () => toast.success('Logged Out successfully !');
+
 
     useEffect(() => {
         async function fetchPosts() {
@@ -32,6 +35,7 @@ const Profile = () => {
                         <button className='bg-red-600 text-center py-2 text-(--text) rounded active:bg-red-900' onClick={async () => {
                             const logout = await api.delete(`api/auth/logout`)
                             navigate('/login')
+                            notify()
                         }}>Logout</button>
                     </div>
                 </div>
