@@ -84,8 +84,13 @@ authRoutes.get("/user", auth, async (req, res) => {
         return res.status(500).json({ message: "Internal Server Error" })
     }
 })
+
 authRoutes.delete("/logout", (req, res) => {
-    res.clearCookie("Token")
+    res.clearCookie("Token", {
+        httpOnly: true,
+        secure: true,
+        sameSite: "None",
+    })
     res.status(200).json({ message: "logged out successfully" })
 })
 
